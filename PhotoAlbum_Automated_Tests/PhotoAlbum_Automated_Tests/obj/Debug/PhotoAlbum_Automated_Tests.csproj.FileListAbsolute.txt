@@ -16,3 +16,12 @@ C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoa
 C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\obj\Debug\PhotoAlbum_Automated_Tests.csprojResolveAssemblyReference.cache
 C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\obj\Debug\PhotoAlbum_Automated_Tests.dll
 C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\obj\Debug\PhotoAlbum_Automated_Tests.pdb
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\bin\Debug\PhotoAlbum_Automated_Tests.dll
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\bin\Debug\PhotoAlbum_Automated_Tests.pdb
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\bin\Debug\WebDriver.dll
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\bin\Debug\WebDriver.Support.dll
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\bin\Debug\WebDriver.xml
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\bin\Debug\WebDriver.Support.xml
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\obj\Debug\PhotoAlbum_Automated_Tests.csprojResolveAssemblyReference.cache
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\obj\Debug\PhotoAlbum_Automated_Tests.dll
+C:\Users\Daniela\Documents\PROGRAMMING\Additional_courses\QA Fundamentals\Photoalbum-QA\PhotoAlbum_Automated_Tests\PhotoAlbum_Automated_Tests\obj\Debug\PhotoAlbum_Automated_Tests.pdb
