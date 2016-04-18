@@ -6,7 +6,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Firefox;
-
+   
     [TestClass]
     public class LikesUnitTests
     {
@@ -24,6 +24,7 @@
         public void SetUp()
         {
             this.driver = new FirefoxDriver();
+
             this.driver.Navigate().GoToUrl(BaseUrl);
             this.driver.Manage().Window.Maximize();
             this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
@@ -62,6 +63,32 @@
                 int numberOfLikesAfter = int.Parse(numberOfLikesSpan.Text);
 
                 Assert.AreEqual(numberOfLikesBefore + 1, numberOfLikesAfter);
+            }
+            catch (AssertFailedException e)
+            {
+                string currentTest = this.GetCurrentMethod();
+                this.BugReport(e, currentTest);
+            }
+        }
+
+        [TestMethod]
+        public void LikePicture_MoreThanOnce_ShouldFail()
+        {
+            try
+            {
+                IWebElement numberOfLikesSpan = this.driver.FindElement(By.XPath("//div[3]/span"));
+                
+                IWebElement likeIcon = this.driver.FindElement(By.XPath("//span/img"));
+                likeIcon.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+                int numberOfLikesBefore = int.Parse(numberOfLikesSpan.Text);
+                
+                likeIcon.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+                int numberOfLikesAfter = int.Parse(numberOfLikesSpan.Text);
+
+                Assert.AreEqual(numberOfLikesBefore, numberOfLikesAfter);
             }
             catch (AssertFailedException e)
             {
