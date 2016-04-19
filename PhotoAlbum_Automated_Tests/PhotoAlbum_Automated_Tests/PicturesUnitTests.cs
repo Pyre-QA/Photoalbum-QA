@@ -2,13 +2,15 @@
 {
     using System;
     using System.Diagnostics;
-    
+    using System.Threading;
+    using System.Windows.Forms;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Firefox;
-   
+
     [TestClass]
-    public class LikesUnitTests
+    public class PicturesUnitTests
     {
         private const string BaseUrl = "http://photoalbum.bugs3.com/#/";
         private const string ValidUsername = "pesho";
@@ -45,25 +47,41 @@
 
             IWebElement loginButton = this.driver.FindElement(By.XPath("/html/body/div/div/div/div/div/form/button"));
             loginButton.Click();
+            Thread.Sleep(3000); // Redirect is slow so extra w8 is needed
             this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
         }
 
         [TestMethod]
-        public void LikePicture_FirstTime_ShouldSucceed()
+        public void UploadPicture_ValidData_ShouldSucceed()
         {
             try
             {
-                IWebElement numberOfLikesSpan = this.driver.FindElement(By.XPath("//div[3]/span"));
-                int numberOfLikesBefore = int.Parse(numberOfLikesSpan.Text);
+                IWebElement homeMenuButton = this.driver.FindElement(By.XPath("//li/a"));
+                homeMenuButton.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
 
-                IWebElement likeIcon = this.driver.FindElement(By.XPath("//span/img"));
-                likeIcon.Click();
+                IWebElement categoriesSidebarButton = this.driver.FindElement(By.XPath("/html/body/div/aside/a[2]"));
+                categoriesSidebarButton.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
+
+                IWebElement addPictureToNatureButton = this.driver.FindElement(By.XPath("/html/body/div/ul/li[1]/button"));
+                addPictureToNatureButton.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
+
+                IWebElement titleField = this.driver.FindElement(By.Id("picture-name"));
+                titleField.Click();
+                titleField.Clear();
+                titleField.SendKeys("test");
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+
+                IWebElement chooseFileButton = this.driver.FindElement(By.Id("picture-upload"));
+                chooseFileButton.Click();
                 this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
-                int numberOfLikesAfter = int.Parse(numberOfLikesSpan.Text);
-                IWebElement greetingElement = this.driver.FindElement(By.Id("greet-user"));
-
-                Assert.AreEqual(numberOfLikesBefore + 1, numberOfLikesAfter);
+                SendKeys.SendWait(@"C:\Users\Daniela\Pictures\test.jpg");
+                SendKeys.SendWait(@"{Enter}");
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+                Assert.AreEqual(true, this.driver.FindElement(By.XPath("//div[contains(.,'test')]")).Displayed);
             }
             catch (AssertFailedException e)
             {
@@ -71,34 +89,7 @@
                 this.BugReport(e, currentTest);
             }
         }
-
-        [TestMethod]
-        public void LikePicture_MoreThanOnce_ShouldFail()
-        {
-            try
-            {
-                IWebElement numberOfLikesSpan = this.driver.FindElement(By.XPath("//div[3]/span"));
-                
-                IWebElement likeIcon = this.driver.FindElement(By.XPath("//span/img"));
-                likeIcon.Click();
-                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-
-                int numberOfLikesBefore = int.Parse(numberOfLikesSpan.Text);
-                
-                likeIcon.Click();
-                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-                int numberOfLikesAfter = int.Parse(numberOfLikesSpan.Text);
-
-                IWebElement greetingElement = this.driver.FindElement(By.Id("greet-user"));
-
-                Assert.AreEqual(numberOfLikesBefore, numberOfLikesAfter);
-            }
-            catch (AssertFailedException e)
-            {
-                string currentTest = this.GetCurrentMethod();
-                this.BugReport(e, currentTest);
-            }
-        }
+        
 
         [TestCleanup]
         public void TearDown()

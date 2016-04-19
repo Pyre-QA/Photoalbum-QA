@@ -64,8 +64,8 @@
   <ItemGroup>
     <Compile Include="LikesUnitTests.cs" />
     <Compile Include="LoginUnitTests.cs" />
+    <Compile Include="PicturesUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PA_Succ_Photo_Upload.cs" />
     <Compile Include="RegisterUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>

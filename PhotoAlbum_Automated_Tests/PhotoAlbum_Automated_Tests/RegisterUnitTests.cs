@@ -204,6 +204,33 @@
             }
         }
 
+        [TestMethod]
+        public void Register_EmptyFields_ShouldStayOnRegisterPage()
+        {
+            try
+            {
+                this.driver.Navigate().GoToUrl(BaseUrl);
+                this.driver.Manage().Window.Maximize();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
+
+                IWebElement registerMenuButton = this.driver.FindElement(By.XPath("//li[3]/a"));
+                registerMenuButton.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
+
+                IWebElement registerButton = this.driver.FindElement(By.Id("register"));
+                registerButton.Click();
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+
+                Assert.AreEqual("http://photoalbum.bugs3.com/#/register", this.driver.Url);
+            }
+            catch (AssertFailedException e)
+            {
+                string currentTest = this.GetCurrentMethod();
+                this.BugReport(e, currentTest);
+            }
+        }
+
 
         [TestCleanup]
         public void TearDown()
