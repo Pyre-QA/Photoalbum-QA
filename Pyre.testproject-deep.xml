@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="2" name="Registration" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="14" name="Successful registration">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[3]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Positive Successful Ragistration Test Case</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	Open http://photoalbum.bugs3.com/</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click on the button to register<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field email<br />
+	4.&nbsp;User input field password<br />
+	5.&nbsp;User input field repeat password<br />
+	6.&nbsp;Clicking the acceptance of registration<br />
+	7. Verify Successful Ragistration</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Page with all uploaded photos should be loaded and a &ldquo;Hello, username&rdquo; greetings should be displayed</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="86" name="Unsuccessful registration: Insert incorrect repeat password">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[27]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>
+	Open http://photoalbum.bugs3.com/</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Register<br />
+	2.&nbsp;Enter username<br />
+	3.&nbsp;Enter email<br />
+	4.&nbsp;Enter password<br />
+	5.&nbsp;Enter invalid password&nbsp;<br />
+	6.&nbsp;Click the acceptance of registration<br />
+	7. Verify Unsuccessful Registration</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;The two passwords don&rsquo;t match&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="89" name="Unsuccessful registration: The username already exist">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[28]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>
+	Open http://photoalbum.bugs3.com/</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Register<br />
+	2.&nbsp;Enter username<br />
+	3.&nbsp;Enter email<br />
+	4.&nbsp;Enter password<br />
+	5.&nbsp;Repeat password&nbsp;<br />
+	6.&nbsp;Click the acceptance of registration<br />
+	7. Verify Unsuccessful Registration</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;User with the same username already exist. Please insert a new one&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="92" name="Unsuccessful registration: The e-mail is already used by a different user">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[29]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>
+	Open http://photoalbum.bugs3.com/</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Register<br />
+	2.&nbsp;Enter username<br />
+	3.&nbsp;Enter &nbsp;email<br />
+	4.&nbsp;Enter password<br />
+	5.&nbsp;Repeat the password&nbsp;<br />
+	6.&nbsp;Clicking the acceptance of registration<br />
+	7. Verify Unsuccessful Registration</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;This e-mail is already used by other user. Please insert a new one&rdquo;.</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite id="3" name="LogIn" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="17" name="Successful login">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[4]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>
+	Positive Successful login Test Case</p>
+]]></summary>
+	<preconditions><![CDATA[<p>
+	1. Open http://photoalbum.bugs3.com/<br />
+	2.&nbsp;Use registered user: &quot;User01&quot; with password &quot;123456&quot;</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5. Verify Successful LogIn</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	The user is successful Loget In and after successful login a page with all uploaded photos should be loaded and a &ldquo;Hello, username&rdquo; greetings should be displayed</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="71" name="Admin Unsuccessful login: Insert only user, without a password">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[22]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &nbsp; &quot;xxxx&quot; without password</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button &nbsp;Login<br />
+	2.&nbsp;Enter valid username<br />
+	3.&nbsp;Click button &nbsp;Login<br />
+	4. Verify Login Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	We stays at the current page. Shows up message in red color over button username:</div>
+<div>
+	&rdquo;Please insert Password&rdquo;.</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="74" name="Admin Unsuccessful login: Insert only password, without a user">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[23]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &nbsp; &quot;xxxx&quot; for password, without a username</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button &nbsp;Login<br />
+	2.&nbsp;Enter valid password<br />
+	3.&nbsp;Click button &nbsp;Login<br />
+	4. Verify LogIn Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;Please insert Username&rdquo;.</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="77" name="Unsuccessful login: Insert correct username and incorrect password">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[24]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use registered user: &quot;xxxx&quot; with password &quot;1234&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button &nbsp;Login&nbsp;<br />
+	2.&nbsp;Enter valid username<br />
+	3.&nbsp;Enter invalid password<br />
+	4.&nbsp;Click button &nbsp;Login<br />
+	5. Verify LogIn Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;Incorrect password&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="80" name="Unsuccessful login: Insert correct password and incorrect username">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[25]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use registered user: &quot;1234&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button &nbsp;Login&nbsp;<br />
+	2.&nbsp;Enter invalid username<br />
+	3.&nbsp;Enter valid password<br />
+	4.&nbsp;Click button &nbsp;Login<br />
+	5. Verify LogIn Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;Incorrect username&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="83" name="Unsuccessful login: Incorrect size of the symbols of a password">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[26]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<p>
+	Open http://photoalbum.bugs3.com/</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Register<br />
+	2.&nbsp;Enter username<br />
+	3.&nbsp;Enter email<br />
+	4.&nbsp;Enter password with max. 4 symbols long<br />
+	5.&nbsp;Enter the same password&nbsp;<br />
+	6.&nbsp;Click the acceptance of registration<br />
+	7. Verify LogIn Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over button username:</div>
+<div>
+	&rdquo;The password must be at least 5 symbols long&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite id="4" name="Category and Pictures Features" >
+<node_order><![CDATA[3]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="20" name="Successful loading category for login users">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[5]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/&nbsp;</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Categoriy (right side menu)<br />
+	7. Verify All Categories are loaded correctly</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	All available categories are displayed, including their name, appropriate icon and an &ldquo;Add Picture&rdquo; button</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="23" name="Successful loading photos by category">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[6]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/&nbsp;</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Category (right side menu)<br />
+	7.&nbsp;User &nbsp;click on the selected category<br />
+	8. Verify Category Order</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Show all photos to selected category whit information about each photo (Author, likes, vote and name of pictures)</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="26" name="Successful loading all photos">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[7]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Photos (right side menu)<br />
+	7. Verify All Photos are Loaded</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Show all photos and information about each photo (Author, likes, vote and name of pictures)</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="29" name="Successful loading enlarged photo">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[8]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User fills field username<br />
+	3.&nbsp;Clicking on Login button<br />
+	4.&nbsp;Clicking on Photo<br />
+	5. Verify Photo is shown correctly</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Show &nbsp;photo in large format and information about &nbsp;photo (Author, likes, vote and name of pictures)</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="32" name="Successful upload photo">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[9]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. User must have picture on his computer.</div>
+<div>
+	3. Use registered user: &nbsp;&quot;User01&quot; with password &quot;12346&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Category (right side menu)<br />
+	7.&nbsp;Clicking on button Add Picture<br />
+	8.&nbsp;Entered name on picture<br />
+	9.&nbsp;Clicking on Choose File button<br />
+	10.&nbsp;Pick the picture you want to upload<br />
+	11. Verefy Picture is Uploaded</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Picture automatically to the select category and the user should be relocated to the page whit photos from this category</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="35" name="Successful like a photo">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[10]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;.</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Likes button (heart shape button) on photo we liked<br />
+	6. Verefy Like is Added</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Likes should be updated immediately without reload the page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="38" name="Successful load picture’s comments">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[11]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on selected picture<br />
+	6.&nbsp;Clicking on Comments button<br />
+	7. Verify comments area</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Displayed comment or comments if have any</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="47" name="Successful add category (Administration)">
+	<node_order><![CDATA[1006]]></node_order>
+	<externalid><![CDATA[14]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+<div>
+	&nbsp;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Category (right side menu)<br />
+	7.&nbsp;Clicking on button Add Category<br />
+	8.&nbsp;Administrator &nbsp;validating category name<br />
+	9.&nbsp;Administrator &nbsp;validating icon size on new category<br />
+	10.&nbsp;Clicking Add new category<br />
+	11. Verify Categori Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Reload page whit new category shows</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="50" name="Successful edit category (Administration)">
+	<node_order><![CDATA[1007]]></node_order>
+	<externalid><![CDATA[15]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Category (right side menu)<br />
+	7.&nbsp;Clicking on edit category button (change name or what wants to edit)<br />
+	8.&nbsp;Click Edit<br />
+	9. Verify Edit Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Reload page whit new changes in category</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="53" name="Successful delete category (Administration)">
+	<node_order><![CDATA[1008]]></node_order>
+	<externalid><![CDATA[16]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	Preconditions: &nbsp;</div>
+<div>
+	1. Open http://photoalbum.bugs3.com/</div>
+<div>
+	2. Use Administration account: &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Category (right side menu)<br />
+	7.&nbsp;Clicking on delete category button<br />
+	8. Verify Category is Deleted</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Deleted a category</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="56" name="Successful upload pictures (Administration)">
+	<node_order><![CDATA[1009]]></node_order>
+	<externalid><![CDATA[17]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/</div>
+<div>
+	2. Use Administration account: &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Category (right side menu)<br />
+	7.&nbsp;Clicking on button Add Picture<br />
+	8.&nbsp;Entered name on picture<br />
+	9.&nbsp;Clicking on Choose File button<br />
+	10.&nbsp;Pick the picture you want to upload<br />
+	11. Verify Successful Picture Upload</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Picture automatically to the select category and the Adminstrator should be relocated to the page whit photos from this category</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="59" name="Successful delete photos (Administration)">
+	<node_order><![CDATA[1010]]></node_order>
+	<externalid><![CDATA[18]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Pictures (right side menu)<br />
+	7.&nbsp;Clicking on delete pictures button<br />
+	8. Verify Photos are Deleted</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Deleted a pictures</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="95" name="Unsuccessful upload photo">
+	<node_order><![CDATA[1011]]></node_order>
+	<externalid><![CDATA[30]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. User must have picture on his computer.</div>
+<div>
+	3. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Login<br />
+	2.&nbsp;Enter valid username<br />
+	3.&nbsp;Enter valid password<br />
+	4.&nbsp;Click button Login<br />
+	5.&nbsp;Click button Photo Album&nbsp;<br />
+	6.&nbsp;Click on Category (right side menu)<br />
+	7.&nbsp;Click button Add Picture<br />
+	8.&nbsp;Enter a &nbsp;title of the picture<br />
+	9.&nbsp;Click button Choose File<br />
+	10.&nbsp;Choose picture for upload with size more than 8MB<br />
+	11. Verify Unsuccessful Upload</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	The picture will not upload.&nbsp;</div>
+<div>
+	Shows up message in red color over button choose file:</div>
+<div>
+	&rdquo;The file is too big. The maximum allowed size of the image is 8MB&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="98" name="Unsuccessful upload photo: It’s not entered title of the image">
+	<node_order><![CDATA[1012]]></node_order>
+	<externalid><![CDATA[31]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. User must have picture on his computer.</div>
+<div>
+	3. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Login<br />
+	2.&nbsp;Enter valid username<br />
+	3.&nbsp;Enter valid password<br />
+	4.&nbsp;Click button Login<br />
+	5.&nbsp;Click button Photo Album&nbsp;<br />
+	6.&nbsp;Click on Category (right side menu)<br />
+	7.&nbsp;Click button Add Picture<br />
+	8.&nbsp;Click button Choose File<br />
+	9.&nbsp;Pick the picture you want to upload<br />
+	10. Verify Unsuccessful Upload</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	The picture will not upload.&nbsp;</div>
+<div>
+	Shows up message in red color over field Picture title:</div>
+<div>
+	&rdquo;You must enter a title of the image.&rdquo;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite id="5" name="Users Feature" >
+<node_order><![CDATA[4]]></node_order>
+<details><![CDATA[]]></details> 
+</testsuite><testsuite id="10" name="Common Features" >
+<node_order><![CDATA[5]]></node_order>
+<details><![CDATA[<p>
+	Common Features of PhotoAlbum</p>
+]]></details> 
+
+<testcase internalid="68" name="Successful Ban user (Administration)">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[21]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &nbsp; &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Login<br />
+	2.&nbsp;Enter valid username<br />
+	3.&nbsp;Enter valid password<br />
+	4.&nbsp;Click button Login<br />
+	5.&nbsp;Click button Photo Album&nbsp;<br />
+	6.&nbsp;Click on Users (right side menu)<br />
+	7.&nbsp;Select user<br />
+	8.&nbsp;Clicking on Ban User button<br />
+	9. Verify User Ban</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	The user must be ban.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="11" name="Successful loading home page">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[2]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Start the internet &nbsp;browser<br />
+	2.&nbsp;Load home page:&nbsp;<br />
+	http://photoalbum.bugs3.com/</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	PhotoAlbum home page shoul load</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="44" name="Successful load all users">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[13]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Photo Album button<br />
+	6.&nbsp;Clicking on Users button (right side menu)<br />
+	7. Verify all users displayed</p>
+]]></actions>
+	<expectedresults><![CDATA[]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite><testsuite id="104" name="Comment Features" >
+<node_order><![CDATA[6]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="101" name="Unsuccessful add comment">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[32]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Click button Login<br />
+	2.&nbsp;Enter valid username<br />
+	3.&nbsp;Enter valid password<br />
+	4.&nbsp;Click button Login<br />
+	5.&nbsp;Click button Comments<br />
+	6.&nbsp;Write only 1 symbol for comment&nbsp;<br />
+	7. Click Ok Button<br />
+	8. Verify Comment Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<div>
+	Shows up message in red color over field Comments:</div>
+<div>
+	&rdquo;You must enter a comment at least 2 symbols long.&rdquo;</div>
+<div>
+	&nbsp;</div>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="65" name="Successful deleted comment (Administration)">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[20]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &nbsp; &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Comments button<br />
+	6.&nbsp;Clicking on delete comment button<br />
+	7. Verify comment area</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Comment must be deleted</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="62" name="Successful add comment (Administration)">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[19]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/.</div>
+<div>
+	2. Use Administration account: &nbsp; &quot;xxxx&quot; with password &quot;xxxx&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;Administrator click on the Login button<br />
+	2.&nbsp;Administrator input field username<br />
+	3.&nbsp;Administrator input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Comments button<br />
+	6.&nbsp;Write comment<br />
+	7.&nbsp;Click Ok Button<br />
+	8. Verify Comment Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Comment should be updated immediately without reload the page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="41" name="Successful add comment">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[12]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[<div>
+	1. Open http://photoalbum.bugs3.com/ .</div>
+<div>
+	2. Use registered user: &nbsp;&quot;User01&quot; with password &quot;123456&quot;</div>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	1.&nbsp;User click on the Login button<br />
+	2.&nbsp;User input field username<br />
+	3.&nbsp;User input field password<br />
+	4.&nbsp;Clicking on Login button<br />
+	5.&nbsp;Clicking on Comments button<br />
+	6.&nbsp;Write comment&nbsp;<br />
+	7. Click on OK Button<br />
+	8. Verefy Comments Area</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Comment should be updated immediately without reload the page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite>
