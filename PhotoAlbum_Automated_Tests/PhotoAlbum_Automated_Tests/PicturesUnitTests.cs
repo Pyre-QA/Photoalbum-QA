@@ -89,6 +89,39 @@
                 this.BugReport(e, currentTest);
             }
         }
+
+
+        [TestMethod]
+        public void EnlargePicture_ShouldDisplayAdditionalInformationCorrectly()
+        {
+            try
+            {
+            IWebElement firstPicture = this.driver.FindElement(By.XPath(".//*[@id='56e1bf739e3510905d00e0f2']/img"));
+                firstPicture.Click();
+                Thread.Sleep(5000);
+                this.driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+                IWebElement pictureNameDiv = this.driver.FindElement(By.XPath("//strong"));
+                var expectedName = "pirin_in_july";
+                var actualName = pictureNameDiv.Text;
+                Assert.AreEqual(expectedName, actualName);
+
+                IWebElement authorNameDiv = this.driver.FindElement(By.XPath("//div[2]"));
+                var expectedAuthor = "Author: pesho";
+                var actualAuthor = authorNameDiv.Text;
+                Assert.AreEqual(expectedAuthor, actualAuthor);
+
+                IWebElement likesDiv = this.driver.FindElement(By.XPath("//span"));
+                var expectedLikes = "22";
+                var actualLikes = likesDiv.Text;
+                Assert.AreEqual(expectedLikes, actualLikes);
+            }
+            catch (AssertFailedException e)
+            {
+                string currentTest = this.GetCurrentMethod();
+                this.BugReport(e, currentTest);
+            }
+        }
         
 
         [TestCleanup]
