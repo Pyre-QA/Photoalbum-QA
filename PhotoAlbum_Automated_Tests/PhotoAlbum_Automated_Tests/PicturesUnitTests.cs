@@ -90,7 +90,6 @@
             }
         }
 
-
         [TestMethod]
         public void EnlargePicture_ShouldDisplayAdditionalInformationCorrectly()
         {
@@ -122,7 +121,6 @@
                 this.BugReport(e, currentTest);
             }
         }
-        
 
         [TestCleanup]
         public void TearDown()
